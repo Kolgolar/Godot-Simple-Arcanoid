@@ -8,6 +8,7 @@ signal score_changed(score: int)
 
 
 func _ready() -> void:
+	randomize()
 	$Ball.set_start_motion()
 	for brick in %Bricks.get_children():
 		brick.destroyed.connect(_on_brick_destroyed)
