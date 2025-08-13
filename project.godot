@@ -1,0 +1,31 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Pilot"
+run/main_scene="uid://c3yjgxvynly8c"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=400
+window/size/viewport_height=700
+window/stretch/mode="canvas_items"
+window/physics_ticks_per_second=120
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/primitive_shapes/plugin.cfg")
+
+[physics]
+
+common/physics_ticks_per_second=120

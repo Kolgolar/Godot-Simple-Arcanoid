@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://jp3jjag1l00m"]
+
+[ext_resource type="Script" uid="uid://fij4r0f7c2b6" path="res://game/ball.gd" id="1_gxnrv"]
+[ext_resource type="Script" uid="uid://cug7hbekyfo6k" path="res://addons/primitive_shapes/circle.gd" id="1_j5xc8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j5xc8"]
+friction = 0.0
+rough = true
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5xc8"]
+
+[node name="Ball" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_j5xc8")
+gravity_scale = 0.0
+custom_integrator = true
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 3
+script = ExtResource("1_gxnrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j5xc8")
+
+[node name="Circle" type="Node2D" parent="."]
+script = ExtResource("1_j5xc8")
+radius = 10.0
+color = Color(0.615407, 0.242948, 0.242948, 1)
+metadata/_custom_type_script = "uid://cug7hbekyfo6k"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
