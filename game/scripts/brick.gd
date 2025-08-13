@@ -1,3 +1,6 @@
+"""
+Скрипт кирпичика, который может быть разрушен мячиком
+"""
 extends StaticBody2D
 
 signal destroyed # Сигнал, сообщающий о том, что платформа была уничтожена
@@ -14,7 +17,6 @@ func destroy():
 	destroyed.emit()
 	$CollisionShape2D.set_deferred("disabled", true)
 	hide()
-	if $AudioStreamPlayer.stream:
-		$AudioStreamPlayer.play()
-		await $AudioStreamPlayer.finished
+	$AudioStreamPlayer.play()
+	await $AudioStreamPlayer.finished
 	queue_free()

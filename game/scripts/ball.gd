@@ -1,3 +1,7 @@
+"""
+Скрипт мячика
+"""
+
 class_name ArcanoidBall
 extends RigidBody2D
 
