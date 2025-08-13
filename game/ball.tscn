@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://jp3jjag1l00m"]
+[gd_scene load_steps=6 format=3 uid="uid://jp3jjag1l00m"]
 
 [ext_resource type="Script" uid="uid://fij4r0f7c2b6" path="res://game/ball.gd" id="1_gxnrv"]
 [ext_resource type="Script" uid="uid://cug7hbekyfo6k" path="res://addons/primitive_shapes/circle.gd" id="1_j5xc8"]
+[ext_resource type="AudioStream" uid="uid://c18vxu0fgyuk8" path="res://game/sounds/ball_hit.sfxr" id="3_mj72b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j5xc8"]
 friction = 0.0
@@ -27,5 +28,9 @@ script = ExtResource("1_j5xc8")
 radius = 10.0
 color = Color(0.615407, 0.242948, 0.242948, 1)
 metadata/_custom_type_script = "uid://cug7hbekyfo6k"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mj72b")
+volume_db = -20.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

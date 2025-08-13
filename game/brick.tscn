@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3braxd5dinue"]
+[gd_scene load_steps=5 format=3 uid="uid://d3braxd5dinue"]
 
 [ext_resource type="Script" uid="uid://h3l2njd4gd7j" path="res://game/brick.gd" id="1_2k5aw"]
 [ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="1_br8p7"]
+[ext_resource type="AudioStream" uid="uid://f30tewve2e6a" path="res://game/sounds/brick_break.sfxr" id="3_lrsgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vop5m"]
 size = Vector2(70, 20)
@@ -13,8 +14,11 @@ script = ExtResource("1_2k5aw")
 shape = SubResource("RectangleShape2D_vop5m")
 
 [node name="Rectangle" type="Node2D" parent="."]
-unique_name_in_owner = true
 script = ExtResource("1_br8p7")
 width = 70.0
 height = 20.0
 metadata/_custom_type_script = "uid://bp35nydfqhkvr"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lrsgv")
+volume_db = -10.0

@@ -14,13 +14,13 @@ func set_start_motion():
 
 
 func _on_body_entered(body: Node) -> void:
+	$AudioStreamPlayer.play()
 	speed += speed_add_step
 	if speed > max_speed:
 		speed = max_speed
 	if body.has_method("get_add_velocity"):
 		var add_velocity = body.get_add_velocity(global_position)
 		linear_velocity += add_velocity
-		#print(add_velocity)
 	if body.has_method("destroy"):
 		body.destroy()
 	linear_velocity = linear_velocity.normalized() * speed

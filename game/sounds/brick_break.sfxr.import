@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://f30tewve2e6a"
+path="res://.godot/imported/brick_break.sfxr-7bda8378df7a8083f7af72f8602d3060.sample"
+
+[deps]
+
+source_file="res://game/sounds/brick_break.sfxr"
+dest_files=["res://.godot/imported/brick_break.sfxr-7bda8378df7a8083f7af72f8602d3060.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://c18vxu0fgyuk8"
+path="res://.godot/imported/ball_hit.sfxr-624cda25233e2174069762b3f8782d47.sample"
+
+[deps]
+
+source_file="res://game/sounds/ball_hit.sfxr"
+dest_files=["res://.godot/imported/ball_hit.sfxr-624cda25233e2174069762b3f8782d47.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

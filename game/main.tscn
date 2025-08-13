@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3yjgxvynly8c"]
+[gd_scene load_steps=5 format=3 uid="uid://c3yjgxvynly8c"]
 
+[ext_resource type="Shader" uid="uid://bw8ah0kjvjx3n" path="res://game/assets/crt.gdshader" id="1_emt18"]
 [ext_resource type="PackedScene" uid="uid://05kl82att7b0" path="res://game/arcanoid.tscn" id="1_xtpaf"]
 [ext_resource type="PackedScene" uid="uid://cro8vrm3g6gj6" path="res://game/hud.tscn" id="4_vop5m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_emt18"]
+shader = ExtResource("1_emt18")
+shader_parameter/scanline_color = Color(0, 0, 0, 1)
+shader_parameter/flicker_color = Color(0, 0, 0, 1)
+shader_parameter/scanlines_count = 10.0
+shader_parameter/scanlines_intensity = 0.3
+shader_parameter/color_offset = 1.5
+shader_parameter/blur = 0.15
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -27,6 +37,17 @@ unique_name_in_owner = true
 
 [node name="HUD" parent="." instance=ExtResource("4_vop5m")]
 unique_name_in_owner = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Shader" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_emt18")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [connection signal="game_over" from="Arcanoid" to="HUD" method="_on_arcanoid_game_over"]
 [connection signal="score_changed" from="Arcanoid" to="HUD" method="_on_arcanoid_score_changed"]
