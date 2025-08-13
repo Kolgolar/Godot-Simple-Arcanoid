@@ -1,22 +1,31 @@
+"""
+Скрипт управляемой платформы (игрока).
+Чем ближе удар был к краю платформы, тем сильнее направление движение мячика
+смещается вбок.
+"""
 extends CharacterBody2D
 
-@export var speed := 500
+@export var speed := 500 # Скорость перемещения платформы
 
-@export var max_ball_speed_add := 200
+@onready var start_pos := position # Запоминаем стартовое положение платформы
+@onready var size = $CollisionShape2D.shape.size # Определяем размер платформы по размеру коллизии
 
-@onready var start_pos := position
-@onready var size = $CollisionShape2D.shape.size
-
-
+# Выполняется 60 раз (по-умолчанию) в секунду. Отвечает за движение мячика
 func _physics_process(delta: float) -> void:
+	# Определяем направление, куда платформа должна двигаться.
+	# Если игрок нажал на стрелочку влево, то direction = -1, если вправо, то 1),
+	# если игрок ни на что не нажал - то 0.
 	var direction := 0
 	direction = Input.get_axis("ui_left", "ui_right")
-	velocity.x = speed * direction
-	move_and_slide()
+	velocity.x = speed * direction # Скорость движения платформы по горизонтали
+	move_and_slide() # Функция, перемещающая платформу, исходя из значения velocity
+	# Всегда держим платформу на одной и той же координате по вертикали.
+	# Это необходимо, так как удар мяча по платформе может её немного смещать вниз.
 	position.y = start_pos.y
 
-
-func get_add_velocity(pos: Vector2) -> Vector2:
+# Возвращает значение, на которое должна измениться скорость мяча по горизонтали при
+# ударе об платформу. Чем дальше от центра платформы - тем больше это значение.
+func get_add_velocity_x_mult(pos: Vector2) -> Vector2:
 	var pos_diff := pos - global_position
 	var speed_mult: float = pos_diff.x / (size.x / 2)
-	return Vector2(speed_mult * max_ball_speed_add, 0)
+	return Vector2(speed_mult, 0)
