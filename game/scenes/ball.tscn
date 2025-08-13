@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://jp3jjag1l00m"]
 
-[ext_resource type="Script" uid="uid://fij4r0f7c2b6" path="res://game/ball.gd" id="1_gxnrv"]
+[ext_resource type="Script" uid="uid://fij4r0f7c2b6" path="res://game/scripts/ball.gd" id="1_gxnrv"]
 [ext_resource type="Script" uid="uid://cug7hbekyfo6k" path="res://addons/primitive_shapes/circle.gd" id="1_j5xc8"]
 [ext_resource type="AudioStream" uid="uid://c18vxu0fgyuk8" path="res://game/sounds/ball_hit.sfxr" id="3_mj72b"]
 

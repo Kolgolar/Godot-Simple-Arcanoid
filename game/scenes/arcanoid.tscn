@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://05kl82att7b0"]
 
-[ext_resource type="Script" uid="uid://doik5k35ly24x" path="res://game/arcanoid.gd" id="1_q7xt1"]
-[ext_resource type="PackedScene" uid="uid://mbjj6mvymje" path="res://game/player_platform.tscn" id="2_4xpcs"]
-[ext_resource type="PackedScene" uid="uid://jp3jjag1l00m" path="res://game/ball.tscn" id="3_1evf8"]
-[ext_resource type="PackedScene" uid="uid://d3braxd5dinue" path="res://game/brick.tscn" id="4_hikbx"]
+[ext_resource type="Script" uid="uid://doik5k35ly24x" path="res://game/scripts/arcanoid.gd" id="1_q7xt1"]
+[ext_resource type="PackedScene" uid="uid://mbjj6mvymje" path="res://game/scenes/player_platform.tscn" id="2_4xpcs"]
+[ext_resource type="PackedScene" uid="uid://jp3jjag1l00m" path="res://game/scenes/ball.tscn" id="3_1evf8"]
+[ext_resource type="PackedScene" uid="uid://d3braxd5dinue" path="res://game/scenes/brick.tscn" id="4_hikbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oa506"]
 size = Vector2(32, 780)

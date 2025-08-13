@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cro8vrm3g6gj6"]
 
-[ext_resource type="Script" uid="uid://7aap7761wv27" path="res://game/hud.gd" id="1_d8ggh"]
+[ext_resource type="Script" uid="uid://7aap7761wv27" path="res://game/scripts/hud.gd" id="1_d8ggh"]
 [ext_resource type="Texture2D" uid="uid://swx73fmovjkd" path="res://game/assets/good_ending.png" id="2_448qv"]
 [ext_resource type="Texture2D" uid="uid://c7ygma6q4e4hw" path="res://game/assets/bad_ending.png" id="3_q6xfg"]
 

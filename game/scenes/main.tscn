@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3yjgxvynly8c"]
 
 [ext_resource type="Shader" uid="uid://bw8ah0kjvjx3n" path="res://game/assets/crt.gdshader" id="1_emt18"]
-[ext_resource type="PackedScene" uid="uid://05kl82att7b0" path="res://game/arcanoid.tscn" id="1_xtpaf"]
-[ext_resource type="PackedScene" uid="uid://cro8vrm3g6gj6" path="res://game/hud.tscn" id="4_vop5m"]
+[ext_resource type="PackedScene" uid="uid://05kl82att7b0" path="res://game/scenes/arcanoid.tscn" id="1_xtpaf"]
+[ext_resource type="PackedScene" uid="uid://cro8vrm3g6gj6" path="res://game/scenes/hud.tscn" id="4_vop5m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_emt18"]
 shader = ExtResource("1_emt18")
